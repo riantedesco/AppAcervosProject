@@ -1,12 +1,11 @@
 <?php
 
-class Livro{
+class Item {
+    var $id;
     var $nome;
-    var $autor;
-    var $genero;
-    var $editora;
-    var $anoLancamento;
-    var $preco;
+    var $quantidade;
+    var $dataInclusao;
+    var $acervo;
 
     public function __construct() {}
 
