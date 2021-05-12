@@ -8,12 +8,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <script src="main.js"></script>
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="estilos.css">
+>>>>>>> 1bb0c451a8937d4fef68750be97d37782c024f5c
     
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<<<<<<< HEAD
     <!-- CSS -->
     <style>
         body {
@@ -74,6 +79,8 @@
             font-family: Tahoma;
         }
     </style>
+=======
+>>>>>>> 1bb0c451a8937d4fef68750be97d37782c024f5c
 </head>
 
 <body>

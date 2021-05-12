@@ -3,6 +3,12 @@
     <head>
         <meta chasrset="utf-8">
         <title>Cadastro de Usuário</title>
+<<<<<<< HEAD
+=======
+
+        <link rel="stylesheet" href="estilos.css">
+
+>>>>>>> 1bb0c451a8937d4fef68750be97d37782c024f5c
     </head>
 
     <body>
