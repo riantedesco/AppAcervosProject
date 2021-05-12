@@ -8,79 +8,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <script src="main.js"></script>
-<<<<<<< HEAD
-=======
     <link rel="stylesheet" href="estilos.css">
->>>>>>> 1bb0c451a8937d4fef68750be97d37782c024f5c
     
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<<<<<<< HEAD
-    <!-- CSS -->
-    <style>
-        body {
-            margin: 0;
-        }
-
-        .icon-bar {
-            width: 100%;
-            background-color: rgb(189, 189, 194);
-            overflow: auto;
-        }
-
-        li {
-            list-style-type: none;
-        }
-
-        .icon-bar a {
-            float: left;
-            width: 25%;
-            text-align: center;
-            padding: 15px;
-            transition: all 0.3s ease;
-            color: rgb(0, 0, 0);
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        .icon-bar a:hover {
-            background-color: gray;
-        }
-
-        .header {
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .footer {
-            position:absolute;
-            width:100%;
-            background-color: rgb(189, 189, 194);
-            text-align: center;
-            padding: 15px;
-        }
-        .tabela {
-        border-collapse: collapse;
-        width: 100%;
-        padding: 8px;
-        text-align: center;
-        }
-
-        .tabela th {
-        background-color: rgb(192, 192, 231);
-        border-radius: 5px;
-        }
-
-        * {
-            font-family: Tahoma;
-        }
-    </style>
-=======
->>>>>>> 1bb0c451a8937d4fef68750be97d37782c024f5c
 </head>
 
 <body>
@@ -94,9 +28,9 @@
     <nav id="main-nav">
         <ul class="icon-bar" >
             <li><a href="#" class="fa fa-home"> Home</a></li>
-            <li><a href="#" class="fa fa-book"> Livros</a></li>
-            <li><a href="#" class="fa fa-film"> Filmes</a></li>
-            <li><a href="#" class="fa fa-home"> CDs</a></li>
+            <li><a href="#" class="fa fa-book"> Meus Acervos</a></li>
+            <li><a href="#" class="fa fa-plus-square"> Novo Acervo</a></li>
+            <li><a href="#" class="fa fa-sign-out"> Sair</a></li>
         </ul>
     </nav>
 
