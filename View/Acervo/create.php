@@ -14,31 +14,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
     </head>
 
     <body>
-    <div>
-        <div class="display-1 d-md-block font-weight-bolder " style= "height: 80%; color:rgb(0, 0, 0); text-shadow: 3px 3px rgb(255, 255, 255); text-align: center;">
-            <p>FreeLib</p>
-            <h1>ACERVO DE MULTIMÍDIA ONLINE</h1>
-        </div>
-    </div>
-    
-    <nav id="main-nav">
-        <ul class="icon-bar" >
-            <li><a href="../../index.php" class="fa fa-home"> Home</a></li>
-            <li><a href="#" class="fa fa-book"> Meus Acervos</a></li>
-            <li><a href="View/Acervo/create.php" class="fa fa-plus-square"> Novo Acervo</a></li>
-            <li><a href="#" class="fa fa-sign-out"> Sair</a></li>
-        </ul>
-    </nav>
-        <form action="../../Controller/AcervoController.php" method="post" name="form_acervo">
-            <input type="text" name="txtTitulo" id="txtTitulo" placeholder="Título" /><br><br>       
-            <input type="text" name="txtConteudo" id="txtConteudo" placeholder="Conteúdo" /><br><br>       
-            <input type="date" name="txtDataCriacao" id="txtDataCriacao" placeholder="Data de Criacão" /><br><br>       
+        <?php include '../../cabecalho.php';?>
+        
+        <form action="../../Controller/AcervoController.php" method="post" name="form_acervo" style="margin-top: 1%; text-align: center;">
+            <input type="text" name="txtTitulo" id="txtTitulo" placeholder="Título" style="text-align: center;"/><br><br>       
+            <input type="text" name="txtConteudo" id="txtConteudo" placeholder="Conteúdo" style="text-align: center;"/><br><br>       
+            <input type="date" name="txtDataCriacao" id="txtDataCriacao" placeholder="Data de Criacão" style="text-align: center;"/><br><br>       
             <input type="submit" value="Cadastrar" />      
             <input type="reset" value="Limpar" />     
         </form>
+
+        <?php include '../../rodape.php';?>
     </body>
 </html>
