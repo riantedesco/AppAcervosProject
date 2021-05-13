@@ -4,7 +4,7 @@ class Acervo {
     var $id;
     var $titulo;
     var $conteudo;
-    var $dataLancamento;
+    var $dataCriacao;
     var $user;
 
     public function __construct() {}

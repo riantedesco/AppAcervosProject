@@ -3,15 +3,36 @@
     <head>
         <meta chasrset="utf-8">
         <title>Cadastro de Usuário</title>
-<<<<<<< HEAD
-=======
 
-        <link rel="stylesheet" href="estilos.css">
-
->>>>>>> 1bb0c451a8937d4fef68750be97d37782c024f5c
+        <!-- Estilos -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="../../estilos.css">
+        
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
     </head>
 
     <body>
+        <div>
+            <div class="display-1 d-md-block font-weight-bolder " style= "height: 80%; color:rgb(0, 0, 0); text-shadow: 3px 3px rgb(255, 255, 255); text-align: center;">
+                <p>FreeLib</p>
+                <h1>ACERVO DE MULTIMÍDIA ONLINE</h1>
+            </div>
+        </div>
+        
+        <nav id="main-nav">
+            <ul class="icon-bar" >
+                <li><a href="../../index.php" class="fa fa-home"> Home</a></li>
+                <li><a href="#" class="fa fa-book"> Meus Acervos</a></li>
+                <li><a href="View/Acervo/create.php" class="fa fa-plus-square"> Novo Acervo</a></li>
+                <li><a href="#" class="fa fa-sign-out"> Sair</a></li>
+            </ul>
+        </nav>
         <form action="../../Controller/UserController.php" method="post" name="form_user">
             <input type="text" name="txtNome" id="txtNome" placeholder="Nome" /><br><br>       
             <input type="text" name="txtSobrenome" id="txtSobrenome" placeholder="Sobrenome" /><br><br>       

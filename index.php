@@ -27,9 +27,9 @@
     
     <nav id="main-nav">
         <ul class="icon-bar" >
-            <li><a href="#" class="fa fa-home"> Home</a></li>
+            <li><a href="index.php" class="fa fa-home"> Home</a></li>
             <li><a href="#" class="fa fa-book"> Meus Acervos</a></li>
-            <li><a href="#" class="fa fa-plus-square"> Novo Acervo</a></li>
+            <li><a href="View/Acervo/create.php" class="fa fa-plus-square"> Novo Acervo</a></li>
             <li><a href="#" class="fa fa-sign-out"> Sair</a></li>
         </ul>
     </nav>

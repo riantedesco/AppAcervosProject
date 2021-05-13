@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <script src="main.js"></script>
-        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="../../estilos.css">
         
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -27,10 +27,10 @@
     
     <nav id="main-nav">
         <ul class="icon-bar" >
-            <li><a href="#" class="fa fa-home"> Home</a></li>
-            <li><a href="#" class="fa fa-book"> Livros</a></li>
-            <li><a href="#" class="fa fa-film"> Filmes</a></li>
-            <li><a href="#" class="fa fa-home"> CDs</a></li>
+            <li><a href="../../index.php" class="fa fa-home"> Home</a></li>
+            <li><a href="#" class="fa fa-book"> Meus Acervos</a></li>
+            <li><a href="View/Acervo/create.php" class="fa fa-plus-square"> Novo Acervo</a></li>
+            <li><a href="#" class="fa fa-sign-out"> Sair</a></li>
         </ul>
     </nav>
         <form action="../../Controller/AcervoController.php" method="post" name="form_acervo">
