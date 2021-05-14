@@ -4,11 +4,11 @@
     class UserDAO {
         private $connection = null;
 
-        public function __construct(){
+        public function __construct() {
             $this->connection = ConnectionDB::getInstance();
         }
 
-        public function create($user){
+        public function create($user) {
             try{
                 $statement = $this->connection->prepare(
                     "INSERT INTO usuario (nome, sobrenome, idade, email, senha) VALUES (?,?,?,?,?)"

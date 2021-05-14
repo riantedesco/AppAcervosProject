@@ -1,4 +1,4 @@
 <?php
-    class LivroValidate {
+    class AcervoValidate {
     }
 ?>

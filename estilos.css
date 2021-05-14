@@ -45,6 +45,7 @@ li {
     text-align: center;
     padding: 15px;
 }
+
 .tabela {
 border-collapse: collapse;
 width: 100%;
@@ -70,9 +71,11 @@ border-radius: 5px;
     padding: 30px;
     border-radius: 5px;
 }
+
   .card-top{
     text-align: center;
 }
+
   .card-group{
     margin-bottom: 10px;
 }

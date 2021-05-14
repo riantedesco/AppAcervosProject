@@ -4,11 +4,11 @@
     class ItemDAO {
         private $connection = null;
 
-        public function __construct(){
+        public function __construct() {
             $this->connection = ConnectionDB::getInstance();
         }
 
-        public function create($item){
+        public function create($item) {
             try{
                 $statement = $this->connection->prepare(
                     "INSERT INTO item (nome, quantidade, dataInclusao) VALUES  (?, ?, ?)"

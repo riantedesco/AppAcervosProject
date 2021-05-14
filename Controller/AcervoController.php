@@ -4,31 +4,67 @@
     include '../Include/AcervoValidate.php';
     include '../Dao/AcervoDAO.php';
 
-    if ((!empty($_POST['txtTitulo'])) &&
-        (!empty($_POST['txtConteudo'])) &&
-        (!empty($_POST['txtDataCriacao']))) {
-            $erros = array();
+    function criar () {
+        $erros = array();
 
-            if (count($erros) == 0) {
-                $acervo = new Acervo();
+        if (count($erros) == 0) {
+            $acervo = new Acervo();
 
-                $acervo->titulo = $_POST['txtTitulo'];
-                $acervo->conteudo = $_POST['txtConteudo'];
-                $acervo->dataCriacao = $_POST['txtDataCriacao'];
+            $acervo->titulo = $_POST['txtTitulo'];
+            $acervo->conteudo = $_POST['txtConteudo'];
+            $acervo->dataCriacao = $_POST['txtDataCriacao'];
 
-                $_SESSION['acervo'] = $acervo->titulo;
-                $_SESSION['conteudo'] = $acervo->conteudo;
-                header("location:../View/Acervo/detail.php");
-            } else {
-                $err = serialize($erros);
-                $_SESSION['erros'] = $err;
-                header("location:../View/Acervo/error.php");
-            }    
+            $acervoDao = new AcervoDAO();
+            $acervoDao->create($acervo);
+
+            $_SESSION['acervo'] = $acervo->titulo;
+            $_SESSION['conteudo'] = $acervo->conteudo;
+            header("location:../View/Acervo/detail.php");
         } else {
-            $erros = array();
-            $erros[] = 'Informe todos os campos!';
             $err = serialize($erros);
             $_SESSION['erros'] = $err;
             header("location:../View/Acervo/error.php");
+        }    
+    }
+
+    function listar () {
+        $acervoDAO = new AcervoDAO();
+        $acervos = $acervoDAO->search();
+
+        $_SESSION['acervos'] = serialize($acervos);
+        header("location:../View/Acervo/list.php");
+    }
+
+    function atualizar () {
+        echo 'Método para criar um acervo.';
+    }
+
+    function deletar () {
+        $id = $_GET['id'];
+        if (isset ($id)) {
+            $acervoDAO = new AcervoDAO();
+            $acervoDAO->delete($id);
+            header("location:../../Controller/AcervoController.php?operation=consultar");
+        } else {
+            echo "Acervo não existente.";
         }
+    }
+
+    $operacao = $_GET['operation'];
+    if (isset ($operacao)) {
+        switch ($operacao) {
+            case 'cadastrar':
+                criar();
+                break;
+            case 'consultar':
+                listar();
+                break;
+            case 'atualizar':
+                atualizar();
+                break;
+            case 'excluir':
+                deletar();
+                break;
+        }
+    } 
 ?>

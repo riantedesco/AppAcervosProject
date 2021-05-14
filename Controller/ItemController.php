@@ -10,13 +10,16 @@
             $erros = array();
 
             if (count($erros) == 0) {
-                $acervo = new Item();
+                $item = new Item();
 
-                $acervo->nome = $_POST['txtNome'];
-                $acervo->quantidade = $_POST['txtQuantidade'];
-                $acervo->dataInclusao = $_POST['txtDataInclusao'];
+                $item->nome = $_POST['txtNome'];
+                $item->quantidade = $_POST['txtQuantidade'];
+                $item->dataInclusao = $_POST['txtDataInclusao'];
 
-                $_SESSION['item'] = $acervo->nome;
+                $itemDao = new ItemDAO();
+                $itemDao->create($item);
+
+                $_SESSION['item'] = $item->nome;
                 header("location:../View/Item/detail.php");
             } else {
                 $err = serialize($erros);

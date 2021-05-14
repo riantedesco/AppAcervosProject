@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Cabeçalho</title>
+        <title>Home</title>
         <meta charset="utf-8">
         
         <!-- Estilos -->
@@ -20,10 +20,11 @@
         <?php include 'cabecalho.php';?>
         
         <div class="container" style="margin-top: 1%; text-align: center;">
-            <h2>Index</h2>
-            <p>Aqui temos o index da página.</p>
+            <h2>Home</h2>
+            <p>Aqui temos a home da página.</p>
         </div>
 
+        <br><br><br><br><br><br>
         <?php include 'rodape.php';?>
     </body>
 </html>

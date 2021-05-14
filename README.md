@@ -24,7 +24,7 @@ Exclusões específicas
     • O usuário se encarrega de manter os acervos atualizados de acordo com sua vontade; 
     • A ferramenta deve funcionar via internet e os serviços nela incluso serão online.
 
-------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
 REQUISITOS DO PROJETO
 
 Requisitos funcionais
