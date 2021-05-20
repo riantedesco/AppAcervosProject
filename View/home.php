@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -8,7 +11,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
         <script src="main.js"></script>
-        <link rel="stylesheet" href="estilos.css">
+        <link rel="stylesheet" href="../estilos.css">
         
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,7 +20,7 @@
     </head>
 
     <body>
-        <?php include 'cabecalho.php';?>
+        <?php include '../cabecalho.php';?>
         
         <div class="container" style="margin-top: 1%; text-align: center;">
             <h2>Home</h2>
@@ -25,7 +28,7 @@
         </div>
 
         <br><br><br><br><br><br>
-        <?php include 'rodape.php';?>
+        <?php include '../rodape.php';?>
     </body>
 </html>
 
