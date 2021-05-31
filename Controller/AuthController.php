@@ -22,7 +22,7 @@
 
     function logout(){
         unset($_SESSION['usuario']);
-        header("location:../../index.php");
+        header("location:../index.php");
     }
 
     $operacao = $_GET['operation'];

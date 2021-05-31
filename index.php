@@ -17,11 +17,18 @@
 
     </head>
     <body>
-        <form action="../../Controlller/AuthController.php?operation=login" method="post" name= "form_user">
-            <input required type="text" name="txtEmail" id="txtEmail" placeholder="E-mail"/><br><br>
-            <input required type="password" name="txtSenha" id="txtSenha" placeholder="Senha"/><br><br>
-            <input type="submit" value="Login"/>
-            <input type="reset" value="Limpar"/>
+        <form action="../../Controller/AuthController.php?operation=login" method="post" name= "form_user">
+        <div class="panel panel-default" style="width: 300px; margin: auto; margin-top: 25vh; ">
+            <h4 style="text-align: center;"><b>AUTENTICAÇÃO</b></h4>
+            
+            <div class= "form-group" style="text-align: center;">
+                <input required class="form-control" type="text" name="txtEmail" id="txtEmail" placeholder="E-mail" style="text-align: center;"/><br>
+                <input required class="form-control" type="password" name="txtSenha" id="txtSenha" placeholder="Senha" style="text-align: center;"/>
+            </div>
+            
+		    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" width="50px">Login</button>
+		    <button class="btn btn-lg btn-primary btn-block btn-signin" type="reset">Limpar</button>
+        </div>
         </form>
     </body>
 </html>

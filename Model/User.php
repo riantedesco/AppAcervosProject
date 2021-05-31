@@ -5,7 +5,7 @@ class User {
     var $nome;
     var $sobrenome;
     var $idade;
-    var $password;
+    var $senha;
     var $email;
 
     public function __construct() {}

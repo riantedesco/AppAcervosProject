@@ -6,10 +6,10 @@
 </div>
 <nav id="main-nav">
     <ul class="icon-bar" >
-        <li><a href="../home.php" class="fa fa-home"> Home</a></li>
-        <li><a href="Acervo/list.php" class="fa fa-book"> Meus Acervos</a></li>
-        <li><a href="Acervo/create.php" class="fa fa-plus-square"> Novo Acervo</a></li>
-        <li><a href="../Controller/AuthController.php?operation=logout" class="fa fa-sign-out"> Sair</a></li> 
+        <li><a href="http://localhost/Trabalho-Web/View/home.php" class="fa fa-home"> Home</a></li>
+        <li><a href="http://localhost/Trabalho-Web/View/Acervo/list.php" class="fa fa-book"> Meus Acervos</a></li>
+        <li><a href="http://localhost/Trabalho-Web/View/Acervo/create.php" class="fa fa-plus-square"> Novo Acervo</a></li>
+        <li><a href="http://localhost/Trabalho-Web/Controller/AuthController.php?operation=logout" class="fa fa-sign-out"> Sair</a></li> 
     </ul>
 </nav>
 <br><br>

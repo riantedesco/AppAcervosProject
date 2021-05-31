@@ -23,7 +23,7 @@
         <?php include '../cabecalho.php';?>
         
         <div class="container" style="margin-top: 1%; text-align: center;">
-            <h2>Home</h2>
+            <h4 style="text-align: center;"><b>HOME</b></h4><br>
             <p>Aqui temos a home da página.</p>
         </div>
 

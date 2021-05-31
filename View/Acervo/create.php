@@ -18,13 +18,19 @@
 
     <body>
         <?php include '../../cabecalho.php';?>
-        
+
         <form action="../../Controller/AcervoController.php?operation=cadastrar" method="post" name="form_acervo" style="margin-top: 1%; text-align: center;">
-            <input required type="text" name="txtTitulo" id="txtTitulo" placeholder="Título" style="text-align: center;"/><br><br>       
-            <input required type="text" name="txtConteudo" id="txtConteudo" placeholder="Conteúdo" style="text-align: center;"/><br><br>       
-            <input required type="date" name="txtDataCriacao" id="txtDataCriacao" placeholder="Data de Criacão" style="text-align: center;"/><br><br>       
-            <input required type="submit" value="Cadastrar" />      
-            <input required type="reset" value="Limpar" />     
+        
+        <div class="panel panel-default" style="width: 300px; margin: auto;">
+            <h4 style="text-align: center;"><b>CRIE UM NOVO ACERVO:</b></h4><br>
+            <div class= "form-group" style="text-align: center;">
+                <input required type="text" class="form-control" name="txtTitulo" id="txtTitulo" placeholder="Título"/><br>
+                <input required type="text" class="form-control" name="txtConteudo" id="txtConteudo" placeholder="Conteúdo"/><br>
+                <input required type="date" class="form-control" name="txtDataCriacao" id="txtDataCriacao" placeholder="Data de Criacão"/><br>    
+                <input required type="submit" value="Cadastrar" />      
+                <input required type="reset" value="Limpar" />  
+            </div>
+        </div>   
         </form>
 
         <?php include '../../rodape.php';?>
