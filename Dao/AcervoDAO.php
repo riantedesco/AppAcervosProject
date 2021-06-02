@@ -20,12 +20,12 @@
 
                 $statement->execute();
 
-                // var_dump($statement); die();
+                 var_dump($statement); die();
 
                 //encerra conexão
                 $this->connection= null;
             } catch(PDOException $e) {
-                echo "Ocorreram erros ao inserir novo usuario!";
+                echo "Ocorreram erros ao inserir novo acervo!";
                 echo $e;
             }
         }

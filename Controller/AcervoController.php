@@ -16,7 +16,7 @@
 
             $acervoDao = new AcervoDAO();
             $acervoDao->create($acervo);
-
+die();
             $_SESSION['acervo'] = $acervo->titulo;
             $_SESSION['conteudo'] = $acervo->conteudo;
             header("location:../View/Acervo/detail.php");

@@ -12,7 +12,7 @@
 
         if($user){
             $_SESSION['usuario'] = serialize($user);
-            header("location:../../View/home.php");
+            header("location:../View/home.php");
         }
         else{
             unset($_SESSION['usuario']);
@@ -36,5 +36,5 @@
                 break;
         }
     }
-
+    
 ?>
