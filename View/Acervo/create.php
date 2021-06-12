@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,6 +20,9 @@
     </head>
 
     <body>
+        <?php
+            $user = unserialize($_SESSION['usuario']);
+        ?>
         <?php include '../../cabecalho.php';?>
 
         <form action="../../Controller/AcervoController.php?operation=cadastrar" method="post" name="form_acervo" style="margin-top: 1%; text-align: center;">

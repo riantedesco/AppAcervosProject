@@ -8,6 +8,8 @@
         $erros = array();
 
         if (count($erros) == 0) {
+            $user = unserialize($_SESSION['usuario']);
+
             $acervo = new Acervo();
 
             $acervo->titulo = $_POST['txtTitulo'];
@@ -17,9 +19,7 @@
             $acervoDao = new AcervoDAO();
             $acervoDao->create($acervo);
 
-            $_SESSION['acervo'] = $acervo->titulo;
-            $_SESSION['conteudo'] = $acervo->conteudo;
-            header("location:../View/Acervo/detail.php");
+            listar();
         } else {
             $err = serialize($erros);
             $_SESSION['erros'] = $err;
@@ -36,7 +36,7 @@
     }
 
     function atualizar () {
-        echo 'Método para criar um acervo.';
+        echo 'Método para atualizar um acervo.';
     }
 
     function deletar () {

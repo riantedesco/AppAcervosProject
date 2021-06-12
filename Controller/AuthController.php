@@ -3,7 +3,7 @@
     include '../Model/User.php';
     include '../Dao/UserDAO.php';
 
-    function login(){
+    function login() {
         $email = $_POST['txtEmail'];
         $senha = $_POST['txtSenha'];
 
@@ -12,11 +12,11 @@
 
         if($user){
             $_SESSION['usuario'] = serialize($user);
-            header("location:../../View/home.php");
+            header("location:../View/home.php");
         }
         else{
             unset($_SESSION['usuario']);
-            header("location:../../index.php");
+            header("location:../index.php");
         }
     }
 
