@@ -39,7 +39,7 @@
                 $statement->bindValue (2, $senha);
                 $statement->execute();
                 $user = $statement->fetchAll();
-
+                //var_dump($statement); die();
                 $this->connection = null;
 
                 return $user;

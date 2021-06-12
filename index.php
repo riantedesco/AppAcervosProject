@@ -19,7 +19,7 @@
     <body>
         <form action="Controller/AuthController.php?operation=login" method="post" name= "form_user">
         <div class="panel panel-default" style="width: 300px; margin: auto; margin-top: 25vh; ">
-            <h4 style="text-align: center;"><b>AUTENTICAÇÃO</b></h4>
+            <h4 style="text-align: center;"><b>AUTENTICAÇÃOo</b></h4>
             
             <div class= "form-group" style="text-align: center;">
                 <input required class="form-control" type="text" name="txtEmail" id="txtEmail" placeholder="E-mail" style="text-align: center;"/><br>
