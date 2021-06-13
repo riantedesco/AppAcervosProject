@@ -22,6 +22,8 @@
     <body>
         <?php
             $user = unserialize($_SESSION['usuario']);
+            if (!$user)
+                header ("Location:../../index.php")
         ?>
         <?php include '../../cabecalho.php';?>
 
