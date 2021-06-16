@@ -34,8 +34,12 @@
                     $conteudo = $a['conteudo'];
                     echo "<tr><td><button name='excluir' href='../../Controller/AcervoController.php?operation=deletar&id=$id'><i class='fas fa-plus'></i>Excluir</button></td> - $titulo - $conteudo<br></tr>";
                 }
-                unset($_SESSION['acervos']);
+                unset($_SESSION['acervos']);   
             }
+
+            $user = unserialize($_SESSION['usuario']);
+            if (!$user)
+                header ("Location:../../index.php");
         ?>
         
         <br><br><br><br><br><br>

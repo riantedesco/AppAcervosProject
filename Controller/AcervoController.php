@@ -19,14 +19,14 @@
             $acervoDao = new AcervoDAO();
             $acervoDao->create($acervo);
 
-            listar();
+            /*listar();*/
             
-            /*
+            
             die();
             $_SESSION['acervo'] = $acervo->titulo;
             $_SESSION['conteudo'] = $acervo->conteudo;
             header("location:../View/Acervo/detail.php");
-            */
+            
         } else {
             $err = serialize($erros);
             $_SESSION['erros'] = $err;
