@@ -11,7 +11,7 @@
         public function create($user) {
             try{
                 $statement = $this->connection->prepare(
-                    "INSERT INTO usuario (nome, sobrenome, idade, email, senha) VALUES (?,?,?,?,md5(?))"
+                    "INSERT INTO usuario (nome, sobrenome, idade, email, senha) VALUES (?,?,?,?,?)"
                 );
 
                 $statement->bindValue (1, $user->nome);
@@ -34,7 +34,7 @@
 
         public function find ($email, $senha){
             try{
-                $statement = $this->connection->prepare("SELECT * FROM usuario where email = ? and senha = md5(?)");
+                $statement = $this->connection->prepare("SELECT * FROM usuario where email = ? and senha = ?");
                 $statement->bindValue (1, $email);
                 $statement->bindValue (2, $senha);
                 $statement->execute();

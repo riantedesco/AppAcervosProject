@@ -21,6 +21,11 @@
 
     <body>
         <?php include '../cabecalho.php';?>
+        <?php
+            $user = unserialize($_SESSION['usuario']);
+            if (!$user)
+                header ("Location:../index.php")
+        ?>
         
         <div class="container" style="margin-top: 1%; text-align: center;">
             <h4 style="text-align: center;"><b>HOME</b></h4><br>
