@@ -45,3 +45,5 @@ Requisitos não-funcionais
         • RNF/OPE-05: O programa utilizará ferramentas como CSS, Bootstrap e JQuery para auxiliar no visual da interface.
     REQUISITOS DE CONFIABILIDADE
         • RNF/CON-01: O sistema deve estar disponível 24 horas por dia durante os 7 dias da semana. Em caso de necessidade de ficar inativo, um responsável deve comunicar aos usuários do aplicativo a indisponibilidade do serviço e seu respectivo prazo.
+    LINK VIDEO
+        https://drive.google.com/file/d/1ouKMGDsCsYmWmiNd4Q0eGB7tFeOuaY2i/view?usp=sharing

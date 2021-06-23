@@ -17,7 +17,7 @@
 
     </head>
     <body>
-        <form action="Controller/AuthController.php?operation=login" method="post" name= "form_user">
+        <form action="../Controller/AuthController.php?operation=login" method="post" name= "form_user">
         <div class="panel panel-default" style="width: 300px; margin: auto; margin-top: 25vh; ">
             <h4 style="text-align: center;"><b>AUTENTICAÇÃO</b></h4>
             
