@@ -21,8 +21,8 @@
 
     <body>
         <?php
-            $user = unserialize($_SESSION['usuario']);
-            if (!$user)
+            $usuario = unserialize($_SESSION['usuario']);
+            if (!$usuario)
                 header ("Location:../../index.php")
         ?>
         <?php include '../../cabecalho.php';?>
@@ -35,8 +35,8 @@
                 <input required type="text" class="form-control" name="txtTitulo" id="txtTitulo" placeholder="Título"/><br>
                 <input required type="text" class="form-control" name="txtConteudo" id="txtConteudo" placeholder="Conteúdo"/><br>
                 <input required type="date" class="form-control" name="txtDataCriacao" id="txtDataCriacao" placeholder="Data de Criacão"/><br>    
-                <input required type="submit" value="Cadastrar" />      
-                <input required type="reset" value="Limpar" />  
+                <input type="submit" value="Cadastrar" />      
+                <input type="reset" value="Limpar" />  
             </div>
         </div>   
         </form>

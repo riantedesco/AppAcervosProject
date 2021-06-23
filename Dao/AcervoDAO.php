@@ -11,16 +11,17 @@
         public function create($acervo) {
             try{
                 $statement = $this->connection->prepare(
-                    "INSERT INTO acervo (titulo, conteudo, dataCriacao) VALUES  (?, ?, ?)"
+                    "INSERT INTO acervo (titulo, conteudo, dataCriacao, usuario) VALUES  (?, ?, ?, ?)"
                 );
 
                 $statement->bindValue (1, $acervo->titulo);
                 $statement->bindValue (2, $acervo->conteudo);
                 $statement->bindValue (3, $acervo->dataCriacao);
+                $statement->bindValue (4, $acervo->usuario);
 
                 $statement->execute();
 
-                 var_dump($statement); die();
+                // var_dump($statement); die();
 
                 //encerra conexão
                 $this->connection= null;

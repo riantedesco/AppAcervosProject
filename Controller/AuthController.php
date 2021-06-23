@@ -1,17 +1,17 @@
 <?php
     session_start();
-    include '../Model/User.php';
-    include '../Dao/UserDAO.php';
+    include '../Model/Usuario.php';
+    include '../Dao/UsuarioDAO.php';
 
     function login() {
         $email = $_POST['txtEmail'];
         $senha = $_POST['txtSenha'];
 
-        $userDao = new UserDAO();
-        $user = $userDao->find($email, $senha);
+        $usuarioDao = new UsuarioDAO();
+        $usuario = $usuarioDao->find($email, $senha);
 
-        if($user){
-            $_SESSION['usuario'] = serialize($user);
+        if($usuario){
+            $_SESSION['usuario'] = serialize($usuario);
             header("location:../View/home.php");
         }
         else{

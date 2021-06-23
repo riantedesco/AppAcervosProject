@@ -1,5 +1,5 @@
 <?php
-    class UserValidate {
+    class UsuarioValidate {
         public static function testarIdade($paramIdade) {
             if (is_numeric($paramIdade)) {
                 return true;

@@ -1,6 +1,6 @@
 <?php
 
-class User {
+class Usuario {
     var $id;
     var $nome;
     var $sobrenome;

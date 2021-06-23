@@ -8,25 +8,21 @@
         $erros = array();
 
         if (count($erros) == 0) {
-            $user = unserialize($_SESSION['usuario']);
+            $usuario = unserialize($_SESSION['usuario']);
 
             $acervo = new Acervo();
 
             $acervo->titulo = $_POST['txtTitulo'];
             $acervo->conteudo = $_POST['txtConteudo'];
             $acervo->dataCriacao = $_POST['txtDataCriacao'];
+            $acervo->usuario = $usuario[0]['id'];
 
             $acervoDao = new AcervoDAO();
             $acervoDao->create($acervo);
 
-            /*listar();*/
-            
+            listar();
             
             die();
-            $_SESSION['acervo'] = $acervo->titulo;
-            $_SESSION['conteudo'] = $acervo->conteudo;
-            header("location:../View/Acervo/detail.php");
-            
         } else {
             $err = serialize($erros);
             $_SESSION['erros'] = $err;
@@ -35,10 +31,10 @@
     }
 
     function listar () {
-        $acervoDAO = new AcervoDAO();
-        $acervos = $acervoDAO->search();
+        $acervoDao = new AcervoDAO();
+        $acervo = $acervoDao->search();
 
-        $_SESSION['acervos'] = serialize($acervos);
+        $_SESSION['acervo'] = serialize($acervo);
         header("location:../View/Acervo/list.php");
     }
 
@@ -49,9 +45,9 @@
     function deletar () {
         $id = $_GET['id'];
         if (isset ($id)) {
-            $acervoDAO = new AcervoDAO();
-            $acervoDAO->delete($id);
-            header("location:../../Controller/AcervoController.php?operation=consultar");
+            $acervoDao = new AcervoDAO();
+            $acervoDao->delete($id);
+            header("location:../Controller/AcervoController.php?operation=consultar");
         } else {
             echo "Acervo não existente.";
         }

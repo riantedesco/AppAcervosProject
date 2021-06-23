@@ -17,7 +17,7 @@
     </head>
 
     <body>
-        <form action="../../Controller/UserController.php" method="post" name="form_user">
+        <form action="../../Controller/UsuarioController.php" method="post" name="form_user">
             <input type="text" name="txtNome" id="txtNome" placeholder="Nome" /><br><br>       
             <input type="text" name="txtSobrenome" id="txtSobrenome" placeholder="Sobrenome" /><br><br>       
             <input type="text" name="txtEmail" id="txtEmail" placeholder="E-mail" /><br><br>       

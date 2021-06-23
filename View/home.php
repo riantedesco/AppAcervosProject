@@ -22,17 +22,15 @@
     <body>
         <?php include '../cabecalho.php';?>
         <?php
-            $user = unserialize($_SESSION['usuario']);
-            if (!$user)
+            $usuario = unserialize($_SESSION['usuario']);
+            if (!$usuario)
                 header ("Location:../index.php")
         ?>
         
         <div class="container" style="margin-top: 1%; text-align: center;">
-            <h4 style="text-align: center;"><b>HOME</b></h4><br>
+            <h2 style="text-align: center;"><b>HOME</b></h2><br>
             <p>Aqui temos a home da página.</p>
         </div>
-
-        <br><br><br><br><br><br>
         <?php include '../rodape.php';?>
     </body>
 </html>

@@ -1,24 +1,24 @@
 <?php
     include '../Persistence/ConnectionDB.php';
 
-    class UserDAO {
+    class UsuarioDAO {
         private $connection = null;
 
         public function __construct() {
             $this->connection = ConnectionDB::getInstance();
         }
 
-        public function create($user) {
+        public function create($usuario) {
             try{
                 $statement = $this->connection->prepare(
                     "INSERT INTO usuario (nome, sobrenome, idade, email, senha) VALUES (?,?,?,?,?)"
                 );
 
-                $statement->bindValue (1, $user->nome);
-                $statement->bindValue (2, $user->sobrenome);
-                $statement->bindValue (3, $user->idade);
-                $statement->bindValue (4, $user->email);
-                $statement->bindValue (5, $user->senha);
+                $statement->bindValue (1, $usuario->nome);
+                $statement->bindValue (2, $usuario->sobrenome);
+                $statement->bindValue (3, $usuario->idade);
+                $statement->bindValue (4, $usuario->email);
+                $statement->bindValue (5, $usuario->senha);
 
                 $statement->execute();
 
@@ -38,11 +38,11 @@
                 $statement->bindValue (1, $email);
                 $statement->bindValue (2, $senha);
                 $statement->execute();
-                $user = $statement->fetchAll();
+                $usuario = $statement->fetchAll();
                 //var_dump($statement); die();
                 $this->connection = null;
 
-                return $user;
+                return $usuario;
             } catch (PDOException $e){
                 echo "Ocorreram erros ao procurar o usuário";
                 echo $e;
