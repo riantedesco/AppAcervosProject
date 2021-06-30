@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Tela de Login</title>
+        <title>Tela de Cadastro</title>
 
         <!-- Estilos -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -17,18 +17,20 @@
 
     </head>
     <body>
-        <form action="Controller/AuthController.php?operation=login" method="post" name= "form_user">
-        <div class="panel panel-default" style="width: 300px; margin: auto; margin-top: 25vh; ">
-            <h4 style="text-align: center;"><b>AUTENTICAÇÃO</b></h4>
+        <form action="Controller/UsuarioController.php" method="post" name= "form_cadastro">
+        <div class="panel panel-default" style="width: 300px; margin: auto; margin-top: 10vh; ">
+            <h4 style="text-align: center;"><b>CADASTRO</b></h4>
             
             <div class= "form-group" style="text-align: center;">
+                <input required class="form-control" type="text" name="txtNome" id="txtNome" placeholder="Nome" style="text-align: center;"/><br>
+                <input required class="form-control" type="text" name="txtSobrenome" id="txtSobrenome" placeholder="Sobrenome" style="text-align: center;"/><br>
+                <input required class="form-control" type="number" name="txtIdade" id="txtIdade" placeholder="   Idade" style="text-align: center;"/><br>
                 <input required class="form-control" type="text" name="txtEmail" id="txtEmail" placeholder="E-mail" style="text-align: center;"/><br>
-                <input required class="form-control" type="password" name="txtSenha" id="txtSenha" placeholder="Senha" style="text-align: center;"/>
+                <input required class="form-control" type="password" name="txtSenha" id="txtSenha" placeholder="Senha" style="text-align: center;"/><br>
             </div>
             
-		    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" width="50px">Login</button>
+		    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" width="50px">Cadastrar</button>
 		    <button class="btn btn-lg btn-primary btn-block btn-signin" type="reset">Limpar</button>
-            <button class="btn btn-lg btn-primary btn-block btn-signin" formaction="http://localhost/Trabalho-Web/cadastro.php" type="submit">Cadastrar</button>
         </div>
         </form>
     </body>

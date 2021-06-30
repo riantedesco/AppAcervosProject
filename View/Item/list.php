@@ -23,13 +23,9 @@
 
         <?php
             $usuario = unserialize($_SESSION['usuario']);
-                if (!$usuario)
+            if (!$usuario)
                 header ("Location:../../index.php");
-            
-            $acervo = unserialize($_SESSION['acervo']);
         ?>
-
-        <b><h3><?php echo $acervo[0]['titulo'] ?></h3></b><br>
 
         <form action="../Item/create.php" method="post">
 		<button name="incluir">Incluir</button>

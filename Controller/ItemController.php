@@ -8,19 +8,18 @@
         $erros = array();
 
         if (count($erros) == 0) {
-            $acervo = unserialize($_SESSION['acervo']);
     
             $item = new Item();
 
             $item->nome = $_POST['txtNome'];
             $item->quantidade = $_POST['txtQuantidade'];
             $item->dataInclusao = $_POST['txtDataInclusao'];
-            $item->acervo = $acervo[0]['id'];
+            $item->acervo = $_SESSION['idAcervoEmUso'];
 
             $itemDao = new ItemDAO();
             $itemDao->create($item);
     
-            listar();
+            listar($_SESSION['idAcervoEmUso']);
 
             die();
         } else {
@@ -30,13 +29,17 @@
         }    
     }
     
-    function listar () {
-        $acervo = unserialize($_SESSION['acervo']);
-        $idAcervo = $acervo[0]['id'];
+    function listar ($id = -1) {
+        if ($id != -1)
+            $_SESSION['idAcervoEmUso'] = $id;
+        else
+            $_SESSION['idAcervoEmUso'] = $_GET['id'];
+            
+        $idAcervo = $_SESSION['idAcervoEmUso'];
 
         $itemDao = new ItemDAO();
         $item = $itemDao->search($idAcervo);
-    
+
         $_SESSION['item'] = serialize($item);
         header("location:../View/Item/list.php");
     }

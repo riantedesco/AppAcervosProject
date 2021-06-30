@@ -26,7 +26,7 @@
                 //encerra conexão
                 $this->connection= null;
             } catch(PDOException $e) {
-                echo "Ocorreram erros ao inserir novo usuario!";
+                echo "Ocorreram erros ao inserir novo item!";
                 echo $e;
             }
         }
