@@ -1,0 +1,79 @@
+body {
+    font-family: Tahoma;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.icon-bar {
+    width: 100%;
+    background-color: rgb(189, 189, 194);
+    overflow: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+.icon-bar a {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.3s ease;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.icon-bar a:hover {
+    background-color: gray;
+}
+
+.header {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.footer {
+    position:absolute;
+    width:100%;
+    background-color: rgb(189, 189, 194);
+    text-align: center;
+}
+
+.tabela {
+border-collapse: collapse;
+width: 100%;
+text-align: center;
+}
+
+.tabela th {
+background-color: rgb(192, 192, 231);
+border-radius: 5px;
+}
+
+.form{
+    width: 400x;
+    margin: auto;
+    padding-top: 40px;
+  
+}
+
+.card{
+    box-shadow: 1px 1px 5px gray;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+  .card-top{
+    text-align: center;
+}
+
+  .card-group{
+    margin-bottom: 10px;
+}

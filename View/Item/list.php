@@ -31,10 +31,10 @@
 
         <b><h3><?php echo $acervo[0]['titulo'] ?></h3></b><br>
 
-        <form action="../../Controller/ItemController.php?operation=incluir" method="post">
+        <form action="../Item/create.php" method="post">
 		<button name="incluir">Incluir</button>
 		<table class="table table-hover table-condensed">
-			<thead>
+			<thead> 
 		      <tr>
 			      <td>Nome</td>
 			      <td>Quantidade</td>

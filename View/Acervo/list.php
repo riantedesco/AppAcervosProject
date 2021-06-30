@@ -46,11 +46,14 @@
                     <?php
                     echo "<h1><b>$titulo</b></h1> <b><h5>$conteudo</h5></b>
                           <td><a name='excluir' href='../../Controller/AcervoController.php?operation=excluir&id=$id'>Excluir</a></td> -- 
-                          <td><a name='excluir' href='../../Controller/ItemController.php?operation=consultar&acervo=$id'>Ver Itens</a></td>
+                          <td><a name='excluir' href='../../Controller/ItemController.php?operation=consultar'>Ver Itens</a></td>
                           <br><br><br>";
-                    ?>
+                        
+                    ?>                    
                     </div>
                     <?php
+
+                    $usuario = unserialize($_SESSION['usuario']);
                 } 
             }
         ?>

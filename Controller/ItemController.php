@@ -21,6 +21,8 @@
             $itemDao->create($item);
     
             listar();
+
+            die();
         } else {
             $err = serialize($erros);
             $_SESSION['erros'] = $err;
@@ -42,10 +44,6 @@
     function atualizar () {
         echo 'Método para atualizar um item.';
     }
-
-    function incluir () {
-        header("location:../View/Item/create.php");
-    }
     
     function deletar () {
         $id = $_GET['id'];
@@ -63,9 +61,6 @@
         switch ($operacao) {
             case 'cadastrar':
                 criar();
-                break;
-            case 'incluir':
-                incluir();
                 break;
             case 'consultar':
                 listar();

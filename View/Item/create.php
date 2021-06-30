@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,12 +23,10 @@
         <?php include '../../cabecalho.php';?>
 
         <?php
-            /*$usuario = unserialize($_SESSION['usuario']);
+            $usuario = unserialize($_SESSION['usuario']);
             if (!$usuario)
-                header ("Location:../../index.php");*/
-        ?>
+                header ("Location:../../index.php");
 
-        <?php         
             $acervo = unserialize($_SESSION['acervo']);
         ?>
         
