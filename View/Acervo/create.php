@@ -20,17 +20,18 @@
     </head>
 
     <body>
+        <?php include '../../cabecalho.php';?>
+
         <?php
             $usuario = unserialize($_SESSION['usuario']);
             if (!$usuario)
                 header ("Location:../../index.php")
         ?>
-        <?php include '../../cabecalho.php';?>
 
         <form action="../../Controller/AcervoController.php?operation=cadastrar" method="post" name="form_acervo" style="margin-top: 1%; text-align: center;">
         
-        <div class="panel panel-default" style="width: 300px; margin: auto;">
-            <h4 style="text-align: center;"><b>CRIE UM NOVO ACERVO:</b></h4><br>
+        <div class="panel panel-default" style="width: 400px; margin: auto;">
+            <h4 style="text-align: center;"><b><?php echo $usuario[0]['nome'], ", " ?>crie um novo acervo:</b></h4><br>
             <div class= "form-group" style="text-align: center;">
                 <input required type="text" class="form-control" name="txtTitulo" id="txtTitulo" placeholder="Título"/><br>
                 <input required type="text" class="form-control" name="txtConteudo" id="txtConteudo" placeholder="Conteúdo"/><br>

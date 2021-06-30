@@ -17,17 +17,22 @@
     </head>
 
     <body>
-        <?php/*
-            $usuario = unserialize($_SESSION['usuario']);
-            if (!$usuario)
-                header ("Location:../../index.php")
-        */?>
         <?php include '../../cabecalho.php';?>
 
-        <form action="create.php" method="post" name="form_item" style="margin-top: 1%; text-align: center;">
+        <?php
+            /*$usuario = unserialize($_SESSION['usuario']);
+            if (!$usuario)
+                header ("Location:../../index.php");*/
+        ?>
 
-        <div class="panel panel-default" style="width: 300px; margin: auto;">
-            <h4 style="text-align: center;"><b>CRIE UM NOVO ITEM:</b></h4><br>
+        <?php         
+            $acervo = unserialize($_SESSION['acervo']);
+        ?>
+        
+        <form action="../../Controller/ItemController.php?operation=cadastrar" method="post" name="form_item" style="margin-top: 1%; text-align: center;">
+
+        <div class="panel panel-default" style="width: 400px; margin: auto;">
+            <h4 style="text-align: center;"><b>Adicionar item em: <?php echo $acervo[0]['titulo'] ?></b></h4><br>
             <div class= "form-group" style="text-align: center;">
                 <input required type="text" class="form-control" name="txtNome" id="txtNome" placeholder="Nome" /><br>
                 <input required type="number" class="form-control" name="txtQuantidade" id="txtQuantidade" placeholder="Quantidade" /><br>  

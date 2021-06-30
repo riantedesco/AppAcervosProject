@@ -19,8 +19,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
 
+    <?php include '../cabecalho.php';?>
+
     <body>
-        <?php include '../cabecalho.php';?>
+        
         <?php
             $usuario = unserialize($_SESSION['usuario']);
             if (!$usuario)
@@ -31,8 +33,9 @@
             <h2 style="text-align: center;"><b>HOME</b></h2><br>
             <p>Aqui temos a home da página.</p>
         </div>
-        <?php include '../rodape.php';?>
+        <br>
     </body>
+    <?php include '../rodape.php';?>
 </html>
 
 

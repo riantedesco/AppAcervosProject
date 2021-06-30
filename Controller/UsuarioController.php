@@ -4,11 +4,6 @@
     include '../Include/UsuarioValidate.php';
     include '../Dao/UsuarioDAO.php';
 
-    if ((!empty($_POST['txtNome'])) &&
-        (!empty($_POST['txtSobrenome'])) &&
-        (!empty($_POST['txtEmail'])) &&
-        (!empty($_POST['txtIdade'])) &&
-        (!empty($_POST['txtSenha'])) ) {
             $erros = array();
 
             if (!UsuarioValidate::testarIdade($_POST['txtIdade'])) {
@@ -37,12 +32,5 @@
                 $err = serialize($erros);
                 $_SESSION['erros'] = $err;
                 header("location:../View/Usuario/error.php");
-            }    
-        } else {
-            $erros = array();
-            $erros[] = 'Informe todos os campos!';
-            $err = serialize($erros);
-            $_SESSION['erros'] = $err;
-            header("location:../View/Usuario/error.php");
-        }
+            }
 ?>

@@ -21,15 +21,24 @@
     <body>
         <?php include '../../cabecalho.php';?>
 
-        <form action="create.php">
-		<button name="incluir"><i class="fas fa-plus"></i>Incluir</button>
+        <?php
+            $usuario = unserialize($_SESSION['usuario']);
+                if (!$usuario)
+                header ("Location:../../index.php");
+            
+            $acervo = unserialize($_SESSION['acervo']);
+        ?>
+
+        <b><h3><?php echo $acervo[0]['titulo'] ?></h3></b><br>
+
+        <form action="../../Controller/ItemController.php?operation=incluir" method="post">
+		<button name="incluir">Incluir</button>
 		<table class="table table-hover table-condensed">
 			<thead>
 		      <tr>
 			      <td>Nome</td>
 			      <td>Quantidade</td>
 			      <td>Data de inclusão</td>
-			      <td></td>
 			      <td></td>	      
 		      </tr>
 		   </thead>
@@ -47,14 +56,12 @@
                         $quantidade = $i['quantidade'];
                         $dataInclusao = $i['dataInclusao'];
                         $acervo = $i['acervo'];
-                        echo "<tr><td>$nome</td><td>$quantidade</td><td>$dataInclusao</td><td><button name='excluir' href='../../Controller/ItemController.php?operation=deletar&id=$id'><i class='fas fa-plus'></i>Excluir</button></td></tr>";
-                    }
-                    unset($_SESSION['acervo']);   
+                        echo "<tr><td>$nome</td>
+                                  <td>$quantidade</td>
+                                  <td>$dataInclusao</td>
+                                  <td><a name='excluir' href='../../Controller/ItemController.php?operation=excluir&id=$id'>Excluir</a></td></tr>";
+                    } 
                 }
-
-                $usuario = unserialize($_SESSION['usuario']);
-                if (!$usuario)
-                    header ("Location:../../index.php");
             ?>
         </table>
         </form>

@@ -21,8 +21,6 @@
             $itemDao->create($item);
     
             listar();
-                
-            die();
         } else {
             $err = serialize($erros);
             $_SESSION['erros'] = $err;
@@ -31,8 +29,11 @@
     }
     
     function listar () {
+        $acervo = unserialize($_SESSION['acervo']);
+        $idAcervo = $acervo[0]['id'];
+
         $itemDao = new ItemDAO();
-        $item = $itemDao->search();
+        $item = $itemDao->search($idAcervo);
     
         $_SESSION['item'] = serialize($item);
         header("location:../View/Item/list.php");
@@ -40,6 +41,10 @@
     
     function atualizar () {
         echo 'Método para atualizar um item.';
+    }
+
+    function incluir () {
+        header("location:../View/Item/create.php");
     }
     
     function deletar () {
@@ -58,6 +63,9 @@
         switch ($operacao) {
             case 'cadastrar':
                 criar();
+                break;
+            case 'incluir':
+                incluir();
                 break;
             case 'consultar':
                 listar();

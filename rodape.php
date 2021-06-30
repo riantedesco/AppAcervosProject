@@ -1,4 +1,4 @@
-<br><br><br>
+<br><br>
 <div class="footer">
     <table class="tabela">
         <tr>

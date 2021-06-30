@@ -17,7 +17,7 @@
                 $statement->bindValue (1, $item->nome);
                 $statement->bindValue (2, $item->quantidade);
                 $statement->bindValue (3, $item->dataInclusao);
-                $statement->bindValue (3, $item->acervo);
+                $statement->bindValue (4, $item->acervo);
 
                 $statement->execute();
 
@@ -31,9 +31,10 @@
             }
         }
 
-        public function search () {
+        public function search ($idAcervo) {
             try {
-                $statement = $this->connection->prepare("SELECT * FROM item");
+                $statement = $this->connection->prepare("SELECT * FROM item WHERE acervo = ?");
+                $statement->bindValue (1, $idAcervo);
                 $statement->execute();
                 $dados = $statement->fetchAll();
                 $this->connection = null;
@@ -47,7 +48,7 @@
 
         public function delete ($id) {
             try {
-                $statement = $this->connection->prepare("DELETE * FROM item WHERE id = ?");
+                $statement = $this->connection->prepare("DELETE FROM item WHERE id = ?");
                 $statement->bindValue (1, $id);
                 $statement->execute();
 

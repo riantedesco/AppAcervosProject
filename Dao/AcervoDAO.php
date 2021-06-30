@@ -31,9 +31,10 @@
             }
         }
 
-        public function search () {
+        public function search ($idUsuario) {
             try {
-                $statement = $this->connection->prepare("SELECT * FROM acervo");
+                $statement = $this->connection->prepare("SELECT * FROM acervo WHERE usuario = ?");
+                $statement->bindValue (1, $idUsuario);
                 $statement->execute();
                 $dados = $statement->fetchAll();
                 $this->connection = null;
@@ -47,7 +48,7 @@
 
         public function delete ($id) {
             try {
-                $statement = $this->connection->prepare("DELETE * FROM acervo WHERE id = ?");
+                $statement = $this->connection->prepare("DELETE FROM acervo WHERE id = ?");
                 $statement->bindValue (1, $id);
                 $statement->execute();
 

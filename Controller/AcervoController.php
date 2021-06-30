@@ -1,7 +1,6 @@
 <?php
     session_start();
     include '../Model/Acervo.php';
-    include '../Include/AcervoValidate.php';
     include '../Dao/AcervoDAO.php';
 
     function criar () {
@@ -31,8 +30,11 @@
     }
 
     function listar () {
+        $usuario = unserialize($_SESSION['usuario']);
+        $idUsuario = $usuario[0]['id'];
+
         $acervoDao = new AcervoDAO();
-        $acervo = $acervoDao->search();
+        $acervo = $acervoDao->search($idUsuario);
 
         $_SESSION['acervo'] = serialize($acervo);
         header("location:../View/Acervo/list.php");
