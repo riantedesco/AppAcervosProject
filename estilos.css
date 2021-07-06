@@ -2,8 +2,8 @@ body {
     font-family: Tahoma;
     max-width: 100%;
     margin-top: 20px;
-    margin-left:20px;
-    margin-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 20px;
 }
 
@@ -43,11 +43,13 @@ li {
     width:100%;
     background-color: rgb(189, 189, 194);
     text-align: center;
+    padding: 15px;
 }
 
 .tabela {
 border-collapse: collapse;
 width: 100%;
+padding: 8px;
 text-align: center;
 }
 

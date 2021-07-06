@@ -33,7 +33,7 @@
             <h2 style="text-align: center;"><b>HOME</b></h2><br>
             <p>Aqui temos a home da página.</p>
         </div>
-        <br>
+        <br><br><br>
     </body>
     <?php include '../rodape.php';?>
 </html>
